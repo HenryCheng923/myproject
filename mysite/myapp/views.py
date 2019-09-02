@@ -10,3 +10,4 @@ def result(request):
 	n=int(request.GET['period'])
 	fv=str((pv*((1+i)**n)))
 	return HttpResponse(fv)
+# Create your views here.
