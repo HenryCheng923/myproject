@@ -20,7 +20,21 @@ from django.conf.urls import url
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^go/$', views.pylinkweb),  #新增這一列
+	#計算本利和
+    url(r'^go/$', views.pylinkweb),  #新增這一列
 	url(r'^fv/', views.deposits),   #新增這一列 
-	url(r'^result/$', views.result),   #新增這一列   
+	url(r'^result/$', views.result),   #新增這一列 
+    #公司股票
+    url(r'^company/$', views.company),
+    url(r'^company/insert/$', views.insert),
+    url(r'^do_insert/$', views.do_insert),
+    url(r'^company/detail/(?P<stockid>\d+)/$', views.detail), #動態網頁資料
+    url(r'^company/update/(?P<stockid>\d+)/$', views.update),
+    url(r'^do_update/$', views.do_update),
+    url(r'^company/delete/(?P<stockid>\d+)/$', views.delete),
+    url(r'^do_delete/$', views.do_delete),
+
+
+
+
 ]
